@@ -1,3 +1,4 @@
-.header_title {
-    color: tomato;
+.header {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075);
+    padding: 1.2rem 0;
 }

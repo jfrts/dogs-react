@@ -5,9 +5,9 @@ import "./styles.css";
 
 export function Header() {
   return (
-    <header className="container">
-      <nav>
-        <Link to="/">
+    <header className="header">
+      <nav className="container">
+        <Link to="/" aria-label="Dogs - Home">
           <ReactSVG src="/assets/dogs.svg" />
         </Link>
         <Link to="/login">Login</Link>

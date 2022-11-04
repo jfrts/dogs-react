@@ -130,19 +130,25 @@ table {
 }
 
 :root {
+    --main-color: #ffbb11;
+    --main-color-shade: #764701; 
+    --white: #f0f6fc;
+    --white-shade: #8b949e;
+    --black: #0d1117;
+    --black-tint: #161b22;
     --main-type: Helvetica, Arial, sans-serif;
     --second-type: 'Spectral', Georgia;
-    /* --main-color: */
 }
 
 body {
-    color: #333;
+    background-color: var(--black);
+    color: var(--white);
     font-family: var(--main-type);
     font-size: 10px;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1024px;
     padding: 0 2rem;
     margin: 0 auto;
 }
