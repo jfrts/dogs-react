@@ -6,11 +6,11 @@ import "./styles.css";
 export function Header() {
   return (
     <header className="header">
-      <nav className="container">
-        <Link to="/" aria-label="Dogs - Home">
+      <nav className="container nav">
+        <Link to="/" aria-label="Dogs - Home" className="logo">
           <ReactSVG src="/assets/dogs.svg" />
         </Link>
-        <Link to="/login">Login</Link>
+        <Link to="/login" className="login">Login / Criar</Link>
       </nav>
     </header>
   );

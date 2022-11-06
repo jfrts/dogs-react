@@ -129,6 +129,10 @@ table {
     border-spacing: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 :root {
     --main-color: #ffbb11;
     --main-color-shade: #764701; 
@@ -136,15 +140,19 @@ table {
     --white-shade: #8b949e;
     --black: #0d1117;
     --black-tint: #161b22;
-    --main-type: Helvetica, Arial, sans-serif;
+    --main-type: 'Space Grotesk', sans-serif;
     --second-type: 'Spectral', Georgia;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
     background-color: var(--black);
     color: var(--white);
     font-family: var(--main-type);
-    font-size: 10px;
+    padding-top: 6.4rem;
 }
 
 .container {
