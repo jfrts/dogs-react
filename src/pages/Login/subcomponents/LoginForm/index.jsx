@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useForm } from "@/hooks/useForm";
 import { Input } from "@/components/Form/Input";
 import { Button } from "@/components/Form/Button";
 
@@ -15,29 +16,29 @@ function login(username, password) {
     }),
   })
     .then((response) => {
-      console.log(response);
       return response.json();
     })
     .then((json) => {
-      console.log(json);
     });
 }
 
 export function LoginForm() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const username = useForm();
+  const password = useForm();
 
   function submitForm(event) {
     event.preventDefault();
-    login(username, password);
+    if (username.validate() && password.validate()) {
+      login(username.value, password.value);
+    }
   }
 
   return (
     <section>
       <h1>Login</h1>
       <form onSubmit={submitForm}>
-        <Input label="Usuário" type="text" name="username" />
-        <Input label="Senha" type="password" name="password" />
+        <Input {...username} label="Usuário" type="text" name="username" />
+        <Input {...password} label="Senha" type="password" name="password" />
 
         <Button>Entrar</Button>
       </form>
