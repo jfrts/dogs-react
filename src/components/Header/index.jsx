@@ -6,8 +6,8 @@ import { UserContext } from "@/context/user-context";
 import "./styles.css";
 
 export function Header() {
-  const { data } = useContext(UserContext);
-  
+  const { data, userLogout } = useContext(UserContext);
+
   return (
     <header className="header">
       <nav className="container nav">
@@ -16,8 +16,14 @@ export function Header() {
         </Link>
         {
           (data && data.nome)
-            ? <Link to="/conta" className="login">{data.nome}</Link>
-            : <Link to="/login" className="login">Login / Criar</Link>
+            ? (
+              <div>
+                <Link to="/conta" className="login">
+                  {data.nome}
+                </Link>
+                <button onClick={userLogout}>Sair</button>
+              </div>
+            ) : <Link to="/login" className="login">Login / Criar</Link>
         }
       </nav>
     </header>

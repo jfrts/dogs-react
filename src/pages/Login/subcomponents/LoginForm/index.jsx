@@ -9,7 +9,7 @@ export function LoginForm() {
   const username = useForm();
   const password = useForm();
 
-  const { userLogin } = useContext(UserContext);
+  const { userLogin, error, loading } = useContext(UserContext);
 
   function submitForm(event) {
     event.preventDefault();
@@ -24,7 +24,8 @@ export function LoginForm() {
       <form onSubmit={submitForm}>
         <Input {...username} label="Usuário" type="text" name="username" />
         <Input {...password} label="Senha" type="password" name="password" />
-        <Button>Entrar</Button>
+        {loading ? <Button disabled>Carregando...</Button> : <Button>Entrar</Button>}
+        {error && <p>{error}</p>}
       </form>
       <Link to="/login/criar">Cadastro</Link>
     </section>
