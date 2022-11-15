@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "@/context/user-context";
 import { useForm } from "@/hooks/useForm";
 import { Input } from "@/components/Form/Input";
 import { Button } from "@/components/Form/Button";
-import { UserContext } from "../../../../context/user-context";
-import { useContext } from "react";
+import { Error } from "@/components/helpers/Error";
+
+import "./styles.css"
 
 export function LoginForm() {
   const username = useForm();
@@ -19,15 +22,29 @@ export function LoginForm() {
   }
 
   return (
-    <section>
-      <h1>Login</h1>
+    <section className="animeLeft">
+      <h1 className="login-title">Bem-vindo(a) de volta!</h1>
+      <p className="login-subtitle">Por favor, preencha seus dados de acesso.</p>
+
       <form onSubmit={submitForm}>
         <Input {...username} label="Usuário" type="text" name="username" />
         <Input {...password} label="Senha" type="password" name="password" />
+
+        <div className="login-support-buttons">
+          <label htmlFor="save">
+            <input type="checkbox" name="save" id="save" />
+            <span>Lembre-me</span>
+          </label>
+          <Link to="/">Perdeu a senha?</Link>
+        </div>
+
         {loading ? <Button disabled>Carregando...</Button> : <Button>Entrar</Button>}
-        {error && <p>{error}</p>}
+        {error && <Error errorMessage={error} />}
       </form>
-      <Link to="/login/criar">Cadastro</Link>
+
+      <div className="login-page-signup">
+        <p>Não possui uma conta? <Link to="/login/criar">Cadastre-se</Link></p>
+      </div>
     </section>
   );
 }

@@ -133,18 +133,20 @@ table {
 }
 
 a {
+    color: var(--white);
     text-decoration: none;
 }
 
 :root {
     --main-color: #ffbb11;
-    --main-color-shade: #764701; 
+    --main-color-shade: #764701;
     --white: #f0f6fc;
     --white-shade: #8b949e;
     --black: #0d1117;
     --black-tint: #161b22;
     --main-type: 'Space Grotesk', sans-serif;
-    --second-type: 'Spectral', Georgia;
+    --second-type: 'Spectral', georgia;
+    --error-color: #f31;
 }
 
 html {
@@ -159,7 +161,41 @@ body {
 }
 
 .container {
+    margin: 0 auto;
     max-width: 1024px;
     padding: 0 2rem;
-    margin: 0 auto;
+}
+
+.title {
+    font-family: var(--second-type);
+    font-size: 2.8rem;
+    line-height: 1;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.title::after {
+    background: var(--main-color);
+    border: 0.3rem;
+    bottom: 4px;
+    content: "";
+    display: block;
+    height: 1rem;
+    left: -2px;
+    position: absolute;
+    width: 1rem;
+    z-index: -1;
+}
+
+.animeLeft {
+    animation: animeLeft 300ms forwards;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+@keyframes animeLeft {
+    to {
+        opacity: 1;
+        transform: initial;
+    }
 }

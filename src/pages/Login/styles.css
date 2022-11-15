@@ -1,0 +1,34 @@
+.login-section {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    min-height: 100vh;
+    gap: 3.2rem;
+}
+
+.login-section::before {
+    background: url("/public/assets/login.jpg") no-repeat center center;
+    background-size: cover;
+    content: "";
+    display: block;
+}
+
+.login-section-forms {
+    max-width: 60rem;
+    padding: 2.4rem;
+    align-self: center;
+}
+
+@media only screen and (max-width: 64rem) {
+    .login-section {
+        grid-template-columns: 1fr;
+    }
+
+    .login-section::before {
+        display: none;
+    }
+
+    .login-section-forms {
+        max-width: 100%;
+        padding: 2.4rem;
+    }
+}

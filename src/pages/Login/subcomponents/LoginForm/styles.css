@@ -1,0 +1,41 @@
+.login-title {
+    font-family: var(--second-type);
+    font-size: 4rem;
+    line-height: 1;
+    margin: 4.8rem 0 0.8rem 0;
+    position: relative;
+}
+
+.login-title::after {
+    background: var(--main-color);
+    border: 0.3rem;
+    bottom: 4px;
+    content: "";
+    display: block;
+    height: 1rem;
+    left: -2px;
+    position: absolute;
+    width: 1rem;
+    z-index: -1;
+}
+
+.login-subtitle {
+    color: var(--white-shade);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-bottom: 3.2rem;
+}
+
+.login-page-signup {
+    margin: 4.2rem 0;
+    text-align: center;
+}
+
+.login-page-signup p {
+    font-size: 1.6rem;
+    color: var(--white-shade);
+}
+
+.login-page-signup a {
+    color: var(--main-color);
+}
