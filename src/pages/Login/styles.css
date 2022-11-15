@@ -1,6 +1,6 @@
 .login-section {
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: 1fr 1fr;
     min-height: 100vh;
     gap: 3.2rem;
 }

@@ -1,6 +1,6 @@
 .login-title {
     font-family: var(--second-type);
-    font-size: 4rem;
+    font-size: 4.2rem;
     line-height: 1;
     margin: 4.8rem 0 0.8rem 0;
     position: relative;
@@ -9,13 +9,13 @@
 .login-title::after {
     background: var(--main-color);
     border: 0.3rem;
-    bottom: 4px;
+    bottom: 6px;
     content: "";
     display: block;
-    height: 1rem;
-    left: -2px;
+    height: 1.4rem;
+    left: 0px;
     position: absolute;
-    width: 1rem;
+    width: 1.4rem;
     z-index: -1;
 }
 
@@ -24,6 +24,25 @@
     font-size: 1.6rem;
     line-height: 1.5;
     margin-bottom: 3.2rem;
+}
+
+
+.login-support-buttons {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.8rem;
+}
+
+.login-support-buttons label {
+    align-items: center;
+    display: flex;
+    gap: 0.4rem;
+}
+
+.login-support-buttons span,
+.login-support-buttons a {
+    font-size: 1.4rem;    
 }
 
 .login-page-signup {

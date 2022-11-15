@@ -21,21 +21,3 @@
     opacity: 0.5;
     cursor: wait;
 }
-
-.login-support-buttons {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2.8rem;
-}
-
-.login-support-buttons label {
-    align-items: center;
-    display: flex;
-    gap: 0.4rem;
-}
-
-.login-support-buttons span,
-.login-support-buttons a {
-    font-size: 1.2rem;    
-}
