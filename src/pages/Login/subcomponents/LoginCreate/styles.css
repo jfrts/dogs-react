@@ -1,0 +1,12 @@
+.login-page-signin {
+    margin-bottom: 3.2rem;
+}
+
+.login-page-signin p {
+    font-size: 1.6rem;
+    color: var(--white-shade);
+}
+
+.login-page-signin a {
+    color: var(--main-color);
+}

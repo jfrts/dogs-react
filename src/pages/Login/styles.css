@@ -6,16 +6,44 @@
 }
 
 .login-section::before {
-    background: url("/public/assets/login.jpg") no-repeat center center;
+    background: url("/assets/login.jpg") no-repeat center center;
     background-size: cover;
     content: "";
     display: block;
 }
 
 .login-section-forms {
-    max-width: 60rem;
+    max-width: 50.5rem;
     padding: 2.4rem;
-    align-self: center;
+    align-self: flex-start;
+}
+
+.login-title {
+    font-family: var(--second-type);
+    font-size: 4.2rem;
+    line-height: 1;
+    margin: 4.8rem 0 1.2rem 0;
+    position: relative;
+}
+
+.login-title::after {
+    background: var(--main-color);
+    border: 0.3rem;
+    bottom: 6px;
+    content: "";
+    display: block;
+    height: 1.4rem;
+    left: 0px;
+    position: absolute;
+    width: 1.4rem;
+    z-index: -1;
+}
+
+.login-subtitle {
+    color: var(--white-shade);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-bottom: 3.2rem;
 }
 
 @media only screen and (max-width: 64rem) {

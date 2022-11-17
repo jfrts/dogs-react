@@ -1,32 +1,3 @@
-.login-title {
-    font-family: var(--second-type);
-    font-size: 4.2rem;
-    line-height: 1;
-    margin: 4.8rem 0 0.8rem 0;
-    position: relative;
-}
-
-.login-title::after {
-    background: var(--main-color);
-    border: 0.3rem;
-    bottom: 6px;
-    content: "";
-    display: block;
-    height: 1.4rem;
-    left: 0px;
-    position: absolute;
-    width: 1.4rem;
-    z-index: -1;
-}
-
-.login-subtitle {
-    color: var(--white-shade);
-    font-size: 1.6rem;
-    line-height: 1.5;
-    margin-bottom: 3.2rem;
-}
-
-
 .login-support-buttons {
     align-items: center;
     display: flex;
