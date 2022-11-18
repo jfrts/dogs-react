@@ -7,7 +7,7 @@ const validationTypes = {
   }
 }
 
-export function useForm(type) {
+export default function useForm(type) {
   const [value, setValue] = useState("");
   const [error, setError] = useState(null);
 

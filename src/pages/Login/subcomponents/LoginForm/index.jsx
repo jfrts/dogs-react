@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "@/context/user-context";
-import { useForm } from "@/hooks/useForm";
+import useForm from "@/hooks/useForm";
 import { Input } from "@/components/Form/Input";
 import { Button } from "@/components/Form/Button";
 import { Error } from "@/components/helpers/Error";
