@@ -1,0 +1,37 @@
+.user-header-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.4rem;
+  margin: 2.4rem 0;
+  height: 5rem;
+}
+
+.user-header-nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black-tint);
+  border-bottom: solid 2px transparent;
+}
+
+.user-header-nav button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: var(--black-tint);
+  color: var(--white);
+  cursor: pointer;
+  border: solid 1px transparent;
+  transition: all 200ms;
+  padding: 0 2.4rem;
+}
+
+.user-header-nav button:hover {
+  border: solid 1px var(--white);
+}
+
+.user-header-nav .active {
+  outline: none;
+  border-bottom: solid 2px var(--main-color);
+}
