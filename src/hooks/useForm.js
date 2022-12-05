@@ -4,6 +4,10 @@ const validationTypes = {
   email: {
     regex: /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
     message: "Preencha um email válido!"
+  },
+  number: {
+    regex: /^\d+$/,
+    message: "Utilize apenas números!"
   }
 }
 
