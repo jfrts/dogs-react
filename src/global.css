@@ -202,7 +202,7 @@ body {
 
 input::file-selector-button {
     background-color: var(--black);
-    border: dashed 1px var(--main-color);
+    border: dashed 1.75px var(--main-color);
     border-radius: 1.6rem;
     color: var(--main-color);
     cursor: pointer;
