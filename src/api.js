@@ -72,3 +72,27 @@ export function GET_PHOTOS({ page, total, user }) {
     }
   }
 }
+
+export function GET_PHOTO(id) {
+  return {
+    url: `${API_URL}/api/photo/${id}`,
+    options: {
+      method: "GET",
+      cache: "no-store"
+    }
+  }
+}
+
+export function POST_COMMENT(id, body) {
+  return {
+    url: `${API_URL}/api/comment/${id}`,
+    options: {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${window.localStorage.getItem("token")}`
+      },
+      body: JSON.stringify(body),
+    }
+  }
+}

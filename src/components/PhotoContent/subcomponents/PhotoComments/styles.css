@@ -1,0 +1,49 @@
+.comments {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+  margin-bottom: 2.4rem;
+  max-height: 24rem;
+  overflow-y: scroll;
+}
+
+.comments b {
+  font-weight: bold;
+}
+
+.comments li {
+  font-size: 1.6rem;
+}
+
+.send-comment-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.send-comment-form textarea {
+  background: var(--black-tint);
+  border: none;
+  color: var(--white);
+  flex-grow: 1;
+  font-size: 1.4rem;
+  resize: none;
+  padding: 0.8rem;
+  min-height: 55px;
+  outline: none;
+}
+
+.send-comment-button {
+  background: var(--main-color);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  padding: .8rem;
+}
+
+.send-comment-button * {
+  fill: var(--black-tint);
+}
