@@ -1,5 +1,10 @@
 import "./styles.css";
+import { Feed } from "@/components/Feed";
 
 export function Home() {
-  return <h1>home</h1>;
+  return (
+    <section className="container main-container">
+      <Feed />
+    </section>
+  );
 }

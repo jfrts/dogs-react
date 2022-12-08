@@ -31,10 +31,14 @@ export function UserPhotoPost() {
   }
 
   function handleImgChange({ target }) {
-    setImg({
-      preview: URL.createObjectURL(target.files[0]),
-      raw: target.files[0],
-    });
+    if (target.files[0]) {
+      setImg({
+        preview: URL.createObjectURL(target.files[0]),
+        raw: target.files[0],
+      });
+    } else {
+      setImg({});
+    }
   }
 
   useEffect(function () {
@@ -64,6 +68,12 @@ export function UserPhotoPost() {
       <RenderIf condition={img.preview}>
         <div className="image-preview">
           <img src={img.preview} alt="Post" />
+        </div>
+      </RenderIf>
+
+      <RenderIf condition={!img.preview}>
+        <div className="no-image-preview">
+          Prévia da Imagem
         </div>
       </RenderIf>
     </section>
