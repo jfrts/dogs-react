@@ -1,0 +1,53 @@
+.feed-photo:nth-child(2) {
+  grid-column: 2 / 4;
+  grid-row: span 2;
+}
+
+@media (max-width: 64rem) {
+  .feed-photo:nth-child(2) {
+    grid-column: initial;
+    grid-row: initial;
+  }
+}
+
+@media (max-width: 40rem) {
+  .feed-photo:nth-child(2) {
+    grid-column: initial;
+    grid-row: initial;
+  }
+}
+
+.feed-photo {
+  border-radius: 0.4rem;
+  cursor: pointer;
+  display: grid;
+  overflow: hidden;
+}
+
+.feed-photo img {
+  grid-area: 1 / 1;
+}
+
+.feed-photo span {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  color: white; 
+  font-size: 1.6rem;
+  grid-area: 1 / 1;
+  justify-content: center;
+  display: none;
+  transition: all 200ms;
+}
+
+.feed-photo:hover span {
+  display: flex;
+}
+
+.feed-photo span::before {
+  content: "";
+  width: 16px;
+  height: 10px;
+  display: inline-block;
+  margin-right: 0.6rem;
+  background: url("assets/visualizacao.svg") no-repeat;
+}

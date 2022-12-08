@@ -1,5 +1,11 @@
+import { FeedModal } from "./subcomponents/FeedModal";
+import { FeedPhotos } from "./subcomponents/FeedPhotos";
+
 export function Feed() {
   return (
-    <h1>FEED</h1>
+    <>
+      <FeedModal />
+      <FeedPhotos />
+    </>
   )
 }

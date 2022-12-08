@@ -62,3 +62,13 @@ export function POST_PHOTO(formData, token) {
     }
   }
 }
+
+export function GET_PHOTOS({ page, total, user }) {
+  return {
+    url: `${API_URL}/api/photo?_page=${page}&_total=${total}&_user=${user}`,
+    options: {
+      method: "GET",
+      cache: "no-store"
+    }
+  }
+}
