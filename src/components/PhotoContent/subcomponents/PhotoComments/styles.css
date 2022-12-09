@@ -4,7 +4,8 @@
   gap: 1.6rem;
   margin-bottom: 2.4rem;
   max-height: 24rem;
-  overflow-y: scroll;
+  overflow-y: auto;
+  word-break: break-word;
 }
 
 .comments b {
