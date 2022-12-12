@@ -24,7 +24,7 @@
   overflow: hidden;
 }
 
-.feed-photo img {
+.feed-photo div {
   grid-area: 1 / 1;
 }
 

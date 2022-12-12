@@ -1,5 +1,6 @@
 import "./styles.css";
-
+import { Image } from "@/components/helpers/Image";
+ 
 export function FeedPhotosItem({ photo, setModalPhoto }) {
   function handleClick() {
     setModalPhoto(photo);
@@ -7,7 +8,7 @@ export function FeedPhotosItem({ photo, setModalPhoto }) {
   
   return (
     <li onClick={handleClick} className="feed-photo">
-      <img src={photo.src} alt={photo.title} />
+      <Image src={photo.src} alt={photo.title} />
       <span>{photo.acessos}</span>
     </li>
   )
