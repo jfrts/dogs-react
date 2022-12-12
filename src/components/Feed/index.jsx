@@ -40,7 +40,7 @@ export function Feed({ user }) {
       </RenderIf>
       {
         pages.map(page =>
-          <FeedPhotos user={user} page={page} setModalPhoto={setModalPhoto} setInfinite={setInfinite} />
+          <FeedPhotos key={page} user={user} page={page} setModalPhoto={setModalPhoto} setInfinite={setInfinite} />
         )
       }
     </>

@@ -6,12 +6,12 @@ import { PhotoComments } from "./subcomponents/PhotoComments";
 import { PhotoDelete } from "./subcomponents/PhotoDelete";
 import { Image } from "@/components/helpers/Image";
 
-export function PhotoContent({ data }) {
+export function PhotoContent({ data, single }) {
   const user = useContext(UserContext);
   const { photo, comments } = data;
 
   return (
-    <div className="photo-content">
+    <div className={single ? "photo-content-single" : "photo-content"}>
       <div className="photo-content-img">
         <Image src={photo.src} alt={photo.title} />
       </div>

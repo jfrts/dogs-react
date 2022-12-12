@@ -1,3 +1,13 @@
+.photo-content-single {
+  margin-top: 3.6rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.photo-content-single .photo-content-details {
+  padding: 2.4rem 0rem;
+}
+
 .photo-content {
   background: var(--black);
   border-radius: 0.4rem;

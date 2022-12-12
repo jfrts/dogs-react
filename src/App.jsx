@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 import { User } from "./pages/User";
+import { Photo } from "./components/Photo";
 
 import "./global.css";
 
@@ -18,6 +19,7 @@ export function App() {
           <Route path="/" element={<Home />} />
           <Route path="login/*" element={<Login />} />
           <Route path="conta/*" element={<ProtectedRouter><User /></ProtectedRouter>} />
+          <Route path="foto/:id" element={<Photo />} />
         </Routes>
         <Footer />
       </UserStorage>
