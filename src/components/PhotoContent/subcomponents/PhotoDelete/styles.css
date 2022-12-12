@@ -1,0 +1,14 @@
+.post-delete-button {
+  background: var(--black);
+  border: solid 1px var(--main-color-shade);
+  color: var(--main-color);
+  cursor: pointer;
+  padding: 0.3rem 1rem;
+  outline: none;
+  transition: all 200ms;
+}
+
+.post-delete-button:hover {
+  background-color: var(--main-color);
+  color: var(--black);
+}
