@@ -13,7 +13,7 @@ export function Loading() {
         else return 0;
       });
     }
-    const interval = setInterval(updateStep, 140);
+    const interval = setInterval(updateStep, 220);
 
     return function () {
       clearInterval(interval);
