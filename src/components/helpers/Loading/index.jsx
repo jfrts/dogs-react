@@ -8,7 +8,6 @@ export function Loading() {
   useEffect(() => {
     function updateStep() {
       setStep((step) => {
-        console.log("STEP: ", step);
         if (step < 3) return step + 1;
         else return 0;
       });
