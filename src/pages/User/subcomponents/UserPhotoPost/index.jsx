@@ -18,7 +18,7 @@ export function UserPhotoPost() {
   const { data, error, loading, request } = useFetch();
   const navigate = useNavigate();
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData();
     formData.append("img", img.raw);
@@ -27,7 +27,7 @@ export function UserPhotoPost() {
     formData.append("idade", age.value);
     const token = window.localStorage.getItem("token");
     const { url, options } = POST_PHOTO(formData, token);
-    request(url, options);
+    await request(url, options);
   }
 
   function handleImgChange({ target }) {
