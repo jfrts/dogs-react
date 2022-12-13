@@ -223,3 +223,13 @@ input::file-selector-button {
 input[type="file"] {
     cursor: pointer;
 }
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh + 16rem);
+}
+
+.App-body {
+    flex: 1;
+}

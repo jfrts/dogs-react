@@ -14,19 +14,23 @@ import "./global.css";
 
 export function App() {
   return (
-    <BrowserRouter>
-      <UserStorage>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="login/*" element={<Login />} />
-          <Route path="conta/*" element={<ProtectedRouter><User /></ProtectedRouter>} />
-          <Route path="perfil/:user" element={<UserProfile />} />
-          <Route path="foto/:id" element={<Photo />} />
-          <Route path="*" element={<Page404 />} />
-        </Routes>
-        <Footer />
-      </UserStorage>
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <UserStorage>
+          <Header />
+          <main className="App-body">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="login/*" element={<Login />} />
+              <Route path="conta/*" element={<ProtectedRouter><User /></ProtectedRouter>} />
+              <Route path="perfil/:user" element={<UserProfile />} />
+              <Route path="foto/:id" element={<Photo />} />
+              <Route path="*" element={<Page404 />} />
+            </Routes>
+          </main>
+          <Footer />
+        </UserStorage>
+      </BrowserRouter>
+    </div>
   );
 }
