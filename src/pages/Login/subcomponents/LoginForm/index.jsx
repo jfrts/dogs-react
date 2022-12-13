@@ -35,7 +35,7 @@ export function LoginForm() {
             <input type="checkbox" name="save" id="save" />
             <span>Lembre-me</span>
           </label>
-          <Link to="/">Perdeu a senha?</Link>
+          <Link to="/login/recuperar-senha">Perdeu a senha?</Link>
         </div>
 
         {loading ? <Button disabled>Carregando...</Button> : <Button>Entrar</Button>}

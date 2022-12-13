@@ -6,6 +6,6 @@ export function Error({ errorMessage }) {
   }
 
   return (
-    <p className="errorMessage">{errorMessage}</p>
+    <p className="errorMessage">❌ {errorMessage}</p>
   )
 }
