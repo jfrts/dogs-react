@@ -5,6 +5,7 @@ import { LoginForm } from "./subcomponents/LoginForm";
 import { LoginCreate } from "./subcomponents/LoginCreate";
 import { LoginPasswordLost } from "./subcomponents/LoginPasswordLost";
 import { LoginPasswordReset } from "./subcomponents/LoginPasswordReset";
+import { Page404 } from "@/components/Page404";
 
 import "./styles.css";
 
@@ -23,6 +24,7 @@ export function Login() {
           <Route path="/criar" element={<LoginCreate />} />
           <Route path="/recuperar-senha" element={<LoginPasswordLost />} />
           <Route path="/resetar-senha" element={<LoginPasswordReset />} />
+          <Route path="*" element={<Page404 />} />
         </Routes>
       </div>
     </section>

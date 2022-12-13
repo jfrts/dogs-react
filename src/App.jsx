@@ -8,6 +8,7 @@ import { Login } from "./pages/Login";
 import { User } from "./pages/User";
 import { UserProfile } from "./pages/User/subcomponents/UserProfile";
 import { Photo } from "./components/Photo";
+import { Page404 } from "./components/Page404";
 
 import "./global.css";
 
@@ -22,6 +23,7 @@ export function App() {
           <Route path="conta/*" element={<ProtectedRouter><User /></ProtectedRouter>} />
           <Route path="perfil/:user" element={<UserProfile />} />
           <Route path="foto/:id" element={<Photo />} />
+          <Route path="*" element={<Page404 />} />
         </Routes>
         <Footer />
       </UserStorage>
