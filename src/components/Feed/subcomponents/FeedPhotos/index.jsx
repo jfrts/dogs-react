@@ -1,5 +1,5 @@
 import "./styles.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { GET_PHOTOS } from "@/api";
 import useFetch from "@/hooks/useFetch";
 import { Error } from "@/components/helpers/Error";
@@ -32,25 +32,11 @@ export function FeedPhotos({ user, page, setModalPhoto, setInfinite }) {
 
   if (data) {
     return (
-<<<<<<< HEAD
       <RenderIf condition={data.length > 0}>
         <ul className="animeLeft feed">
           {data.map((photo) => <FeedPhotosItem photo={photo} setModalPhoto={setModalPhoto} key={photo.id} />)}
         </ul>
       </RenderIf>
-=======
-      <>
-        <RenderIf condition={data.length > 0}>
-          <ul className="animeLeft feed">
-            {data.map((photo) => <FeedPhotosItem photo={photo} setModalPhoto={setModalPhoto} key={photo.id} />)}
-          </ul>
-        </RenderIf>
-
-        <RenderIf condition={data.length === 0}>
-          <h2 className="empty-message">Nenhuma postagem para ser mostrada...</h2>
-        </RenderIf>
-      </>
->>>>>>> fc0a21c5ea039a55a5dafa9e80f2337d1aa943b2
     )
   }
 }
