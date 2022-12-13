@@ -32,17 +32,11 @@ export function FeedPhotos({ user, page, setModalPhoto, setInfinite }) {
 
   if (data) {
     return (
-      <>
-        <RenderIf condition={data.length > 0}>
-          <ul className="animeLeft feed">
-            {data.map((photo) => <FeedPhotosItem photo={photo} setModalPhoto={setModalPhoto} key={photo.id} />)}
-          </ul>
-        </RenderIf>
-
-        <RenderIf condition={data.length === 0}>
-          <h2 className="empty-message">Nenhuma postagem para ser mostrada...</h2>
-        </RenderIf>
-      </>
+      <RenderIf condition={data.length > 0}>
+        <ul className="animeLeft feed">
+          {data.map((photo) => <FeedPhotosItem photo={photo} setModalPhoto={setModalPhoto} key={photo.id} />)}
+        </ul>
+      </RenderIf>
     )
   }
 }
