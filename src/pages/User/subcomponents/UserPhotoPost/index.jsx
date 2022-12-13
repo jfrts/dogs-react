@@ -5,10 +5,10 @@ import { RenderIf } from "@/components/render-if";
 import { Error } from "@/components/helpers/Error";
 import { Input } from "@/components/form/Input";
 import { Button } from "@/components/form/Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { POST_PHOTO } from "@/api";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { Head } from "@/components/Head";
 
 export function UserPhotoPost() {
   const name = useForm();
@@ -49,6 +49,7 @@ export function UserPhotoPost() {
 
   return (
     <section className="photo-post-section">
+      <Head title="Postar Foto" />
       <form onSubmit={handleSubmit}>
         <Input label="Nome" type="text" name="name" {...name} />
         <Input label="Peso" type="number" name="weight" {...weight} />

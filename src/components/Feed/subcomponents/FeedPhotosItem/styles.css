@@ -49,5 +49,5 @@
   height: 10px;
   display: inline-block;
   margin-right: 0.6rem;
-  background: url("assets/visualizacao.svg") no-repeat;
+  background: url("/assets/visualizacao.svg") no-repeat;
 }
