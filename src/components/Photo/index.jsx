@@ -23,7 +23,7 @@ export function Photo() {
   return (
     <>
       <RenderIf condition={error}>
-        <Error>{error}</Error>
+        <Error errorMessage={error} />
       </RenderIf>
 
       <RenderIf condition={loading}>

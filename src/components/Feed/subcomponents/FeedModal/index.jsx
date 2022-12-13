@@ -24,7 +24,7 @@ export function FeedModal({ photo, setModalPhoto }) {
   return (
     <div onClick={handleOutsideClick} className="modal">
       <RenderIf condition={error}>
-        <Error>{error}</Error>
+        <Error errorMessage={error} />
       </RenderIf>
       <RenderIf condition={loading}>
         <Loading />

@@ -23,7 +23,7 @@ export function FeedPhotos({ user, page, setModalPhoto, setInfinite }) {
   }, [request, user, setInfinite]);
 
   if (error) {
-    return <Error>{error}</Error>
+    return <Error errorMessage={error} />
   }
 
   if (loading) {

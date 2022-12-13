@@ -63,7 +63,7 @@ export function UserPhotoPost() {
           <Button disabled>Enviando...</Button>
         </RenderIf>
 
-        <Error>{error}</Error>
+        <Error errorMessage={error} />
       </form>
       <RenderIf condition={img.preview}>
         <div className="image-preview">

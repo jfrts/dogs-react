@@ -7,7 +7,7 @@ import { useContext, useState } from "react";
 import { RenderIf } from "@/components/render-if";
 
 export function PhotoComments({ id, comments }) {
-  const { request, error } = useFetch();
+  const { request } = useFetch();
   const [commentsList, setCommentsList] = useState(() => comments);
   const [comment, setComment] = useState("");
   const { login } = useContext(UserContext);
