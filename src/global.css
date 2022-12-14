@@ -227,7 +227,7 @@ input[type="file"] {
 .App {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh + 16rem);
+    min-height: calc(100vh + 12rem);
 }
 
 .App-body {

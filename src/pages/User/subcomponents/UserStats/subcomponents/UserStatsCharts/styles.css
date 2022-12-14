@@ -1,0 +1,30 @@
+.charts-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+  margin-bottom: 4rem;
+}
+
+.chart-item {
+  align-items: center;
+  box-shadow: 0 4px 50px #090909;
+  border-radius: 0.8rem;
+  display: grid;
+  padding: 1.6rem;
+}
+
+.total {
+  grid-column: 1 / 3;
+  font-size: 3.2rem;
+  padding: 3.2rem;
+}
+
+.VictoryContainer {
+  height: initial !important;
+}
+
+@media (max-width: 64rem) {
+  .charts-section {
+    grid-template-columns: 1fr;
+  }
+}
