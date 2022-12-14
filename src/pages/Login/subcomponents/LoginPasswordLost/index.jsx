@@ -23,7 +23,7 @@ export function LoginPasswordLost() {
   }
 
   return (
-    <section className="passwd-form">
+    <section className="animeLeft passwd-form">
       <h1 className="title">Perdeu a senha?</h1>
 
       <RenderIf condition={data}>

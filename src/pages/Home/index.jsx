@@ -1,4 +1,3 @@
-import "./styles.css";
 import { Feed } from "@/components/Feed";
 import { Head } from "@/components/Head";
 

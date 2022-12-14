@@ -42,7 +42,7 @@ export function LoginPasswordReset() {
   }, []);
 
   return (
-    <section className="passwd-form">
+    <section className="animeLeft passwd-form">
       <h1 className="title">Crie uma nova senha</h1>
 
       <form onSubmit={resetPassword}>

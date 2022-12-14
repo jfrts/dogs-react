@@ -9,6 +9,8 @@ const UserStatsCharts = lazy(() => import("./subcomponents/UserStatsCharts"));
 export function UserStats() {
   const { data, error, loading, request } = useFetch();
 
+  console.log(UserStatsCharts);
+
   useEffect(function () {
     async function getUserStats() {
       const { url, options } = GET_USER_STATS();
@@ -25,12 +27,16 @@ export function UserStats() {
     return <Error errorMessage={error} />
   }
 
-  if (data) {
+  if (data && data.length > 0) {
     return (
       <Suspense fallback={<></>}>
         <Head title="Estatísticas" />
         <UserStatsCharts data={data} />
       </Suspense>
     )
-  } else return null;
+  } else return (
+    <div className="container main-container">
+      <h2 className="empty-message">Você não possui postagens...</h2>
+    </div>
+  );
 }

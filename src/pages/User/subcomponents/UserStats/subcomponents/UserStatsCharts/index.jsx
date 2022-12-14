@@ -2,7 +2,8 @@ import "./styles.css";
 import { useEffect, useState } from "react";
 import { VictoryPie, VictoryChart, VictoryBar, VictoryTheme } from "victory";
 
-export function UserStatsCharts({ data }) {
+export default function UserStatsCharts({ data }) {
+  console.log("🚀 ~ file: index.jsx:6 ~ UserStatsCharts ~ data", data)
   const [chart, setChart] = useState([]);
   const [total, setTotal] = useState(0);
 
